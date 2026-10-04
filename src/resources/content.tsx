@@ -2,19 +2,19 @@ import { About, Blog, Gallery, Home, Newsletter, Person, Social, Work } from "@/
 import { Line, Row, Text } from "@once-ui-system/core";
 
 const person: Person = {
-  firstName: "Selene",
-  lastName: "Yu",
-  name: `Selene Yu`,
-  role: "Design Engineer",
+  firstName: "Thi Thuy Hien",
+  lastName: "Truongova",
+  name: `Thi Thuy Hien Truongova`,
+  role: "Software and Data Engineer",
   avatar: "/images/avatar.jpg",
-  email: "example@gmail.com",
-  location: "Asia/Jakarta", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
-  languages: ["English", "Bahasa"], // optional: Leave the array empty if you don't want to display languages
+  email: "thithuyhientruongova@gmail.com",
+  location: "Europe/London", // Expecting the IANA time zone identifier, e.g., 'Europe/Vienna'
+  languages: ["English", "Vietnamese", "Czech", "Slovak"], // optional: Leave the array empty if you don't want to display languages
   locale: "en", // BCP 47 language tag for the HTML lang attribute, e.g., 'en', 'ja', 'zh-TW'
 };
 
 const newsletter: Newsletter = {
-  display: true,
+  display: false,
   title: <>Subscribe to {person.firstName}'s Newsletter</>,
   description: <>My weekly newsletter about creativity and engineering</>,
 };
@@ -26,27 +26,27 @@ const social: Social = [
   {
     name: "GitHub",
     icon: "github",
-    link: "https://github.com/once-ui-system",
+    link: "https://github.com/AlissaTruongova",
     essential: true,
   },
   {
     name: "LinkedIn",
     icon: "linkedin",
-    link: "https://www.linkedin.com/company/once-ui/",
+    link: "https://www.linkedin.com/in/thi-thuy-hien-truongova-348143287/",
     essential: true,
   },
-  {
-    name: "Instagram",
-    icon: "instagram",
-    link: "https://www.instagram.com/once_ui/",
-    essential: false,
-  },
-  {
-    name: "Threads",
-    icon: "threads",
-    link: "https://www.threads.com/@once_ui",
-    essential: true,
-  },
+  // {
+  //   name: "Instagram",
+  //   icon: "instagram",
+  //   link: "https://www.instagram.com/once_ui/",
+  //   essential: false,
+  // },
+  // {
+  //   name: "Threads",
+  //   icon: "threads",
+  //   link: "https://www.threads.com/@once_ui",
+  //   essential: true,
+  // },
   {
     name: "Email",
     icon: "email",
@@ -61,9 +61,9 @@ const home: Home = {
   label: "Home",
   title: `${person.name}'s Portfolio`,
   description: `Portfolio website showcasing my work as a ${person.role}`,
-  headline: <>Building bridges between design and code</>,
+  headline: <>Coder by day, <br/> problem-solver by night.</>,
   featured: {
-    display: true,
+    display: false,
     title: (
       <Row gap="12" vertical="center">
         <strong className="ml-4">Once UI</strong>{" "}
@@ -77,8 +77,7 @@ const home: Home = {
   },
   subline: (
     <>
-      I'm {person.firstName}, a {person.role.toLowerCase()} at{" "}
-      <Text as="span" size="xl" weight="strong">ONCE UI</Text>, where I craft intuitive <br /> user experiences. After hours, I build my own projects.
+      I'm {person.firstName}, a {person.role} passionate about building elegant solutions to complex challenges.
     </>
   ),
 };
@@ -104,9 +103,8 @@ const about: About = {
     title: "Introduction",
     description: (
       <>
-        {person.firstName} is a {person.location.split("/")[1]?.replace("_", " ")}-based {person.role.toLowerCase()} with a passion for transforming complex challenges
-        into simple, elegant design solutions. Their work spans digital interfaces, interactive
-        experiences, and the convergence of design and technology.
+        I am a {person.location.split("/")[1]?.replace("_", " ")}-based {person.role.toLowerCase()} with a passion for transforming complex challenges
+        into simple, elegant design solutions. My work spans full-stack web development, algorithmic optimisation work and distributed embedded device control API.
       </>
     ),
   },
@@ -115,42 +113,59 @@ const about: About = {
     title: "Work Experience",
     experiences: [
       {
-        company: "FLY",
-        timeframe: "2022 - Present",
-        role: "Senior Design Engineer",
+        company: "Brunel University of London",
+        timeframe: "2024 - 2025",
+        role: "Software and Data Engineer",
+        
         achievements: [
           <>
-            Redesigned the UI/UX for the FLY platform, resulting in a 20% increase in user
-            engagement and 30% faster load times.
+            Implemented large-scale optimisation algorithms, increasing solution quality from 82% to 100%,
+            creating the very first vialabe solution to an allocation problem.
           </>,
           <>
-            Spearheaded the integration of AI tools into design workflows, enabling designers to
-            iterate 50% faster.
+            Designed a distributed control API serving 700+ devices and telemetry pipelines analysing 500+ users.
           </>,
+          <>
+            Reduced control errors by 12% in real-time navigation tests by enhancing command precision.
+          </>,
+          <>
+            Collaborated with a team to develop software and design assets, building a cohesive brand. 
+            Contributing to event planning that attracted 300+ attendees and 7 corporate sponsors.
+          </>
         ],
         images: [
-          // optional: leave the array empty if you don't want to display images
-          {
-            src: "/images/projects/project-01/cover-01.jpg",
-            alt: "Once UI Project",
-            width: 16,
-            height: 9,
-          },
+          // {
+          //   src: "/images/projects/project-01/cover-01.jpg",
+          //   alt: "Once UI Project",
+          //   width: 16,
+          //   height: 9,
+          // },
         ],
       },
       {
-        company: "Creativ3",
-        timeframe: "2018 - 2022",
-        role: "Lead Designer",
+        company: "Brunel University of London",
+        timeframe: "2023 - 2026",
+        role: "Associate Teaching Assistant: Computer Science",
         achievements: [
           <>
-            Developed a design system that unified the brand across multiple platforms, improving
-            design consistency by 40%.
+            Appointed as the sole ATA to independently plan, host and run weekly technical support sessions for 400+ students.
           </>,
           <>
-            Led a cross-functional team to launch a new product line, contributing to a 15% increase
-            in overall company revenue.
+            Tested and debugged coding projects, identifying issues, and guided students toward optimised solutions. 
           </>,
+          <>
+            Broke down complex technical concepts to students of differing abilities, tailoring tutorials to each group.
+          </>,
+          <>
+            Taught modules: 
+            <ul>
+              <li>CS1604 Programming Applications</li>
+              <li>CS1702 Introductory Programming</li>
+              <li>CS1005 Logic and Computation</li>
+              <li>CS1601 Information Systems & Organisations</li>
+            </ul>
+          </>
+          
         ],
         images: [],
       },
@@ -158,15 +173,17 @@ const about: About = {
   },
   studies: {
     display: true, // set to false to hide this section
-    title: "Studies",
+    title: "Education",
     institutions: [
       {
-        name: "University of Jakarta",
-        description: <>Studied software engineering.</>,
+        name: "Brunel University of London",
+        description: <>BSc Computer Science with Placement</>,
+        results: "First Class Honours"
       },
       {
-        name: "Build the Future",
-        description: <>Studied online marketing and personal branding.</>,
+        name: "Gymnazium Hodonin",
+        description: <>A levels</>,
+        results: "A*AAA (English, Maths, Czech, Civics) "
       },
     ],
   },
